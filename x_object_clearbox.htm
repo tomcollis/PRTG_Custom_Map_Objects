@@ -1,0 +1,12 @@
+<!--Objects: Clear box with curved black border-->
+
+<div class="map_object map_graph" id="<@itemid>" objectid="<@objectid>" subid="<@subid>" style="<#mapobject type="coordinates" subid="<@subid>" mode="<@editmode>">">
+<#mapobject type="objectgrip" mode="<@editmode>">
+<#checkobjecttype objecttype="sensor,probenode,group,device" nicemessage="true" id="<@objectid>">
+
+	    <div style="display:block;width:<@width>px;height:<@height>px;border-radius:10px 10px 10px 10px;border:2px solid black;padding:5px;">
+		<#mapobject type="htmlbefore" subid="<@subid>">
+		</div>
+
+  <#mapobject type="htmlafter" subid="<@subid>">
+</div>
