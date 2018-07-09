@@ -1,0 +1,29 @@
+<!--Data Tables: DOWN small -->
+
+<div class="map_object map_table" id="<@itemid>" objectid="<@objectid>" subid="<@subid>" style="overflow:auto;<#mapobject type="coordinates" subid="<@subid>" mode="<@editmode>">">
+  <#mapobject type="objectgrip" mode="<@editmode>">
+  <#mapobject type="htmlbefore" subid="<@subid>">
+  <#checkobjecttype objecttype="probenode,group,device" nicemessage="true" id="<@objectid>">
+  <div class="maptablecontainer" style="overflow:hidden">
+    <#lang key="html.dashboard.alarms" default="Alarms" var="alarms">
+    <#lang key="html.dashboard.ackalarms" default="Ack'ed Alarms" var="ackalarms">
+    <#objectstatus name="downsens" id="0" show="htmllink" var="alarmcount">
+    <#objectstatus name="downacksens" id="0" show="htmllink" var="ackalarmcount">
+    <b><#inserthtml html="@alarmcount @alarms, @ackalarmcount @ackalarms" varexpand="html"></b>
+    <#table tableid="dashalarmtable"
+      content="sensors"
+      id="<@objectid>"
+      columns="device,sensor"
+      count="50"
+      sortby="sensor"
+      links="false"
+      sortable="false"
+      infoheader="false"
+      filter_tags="@tag(<@tagfilterstring>)"
+      filter_status="5"
+	  filter_status="4"
+      filter_status="13"
+      filter_status="14">
+  </div>
+  <#mapobject type="htmlafter" subid="<@subid>">
+</div>
