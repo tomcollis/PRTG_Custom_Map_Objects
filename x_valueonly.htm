@@ -1,0 +1,10 @@
+<!--Status Icons: Last Value (On White)-->
+
+<div class="map_object map_icon mapicon_status_white" id="<@itemid>" objectid="<@objectid>" subid="<@subid>" style="<#mapobject type="topleftcoordinates" subid="<@subid>" mode="<@editmode>">">
+  <#mapobject type="objectgrip" mode="<@editmode>">
+  <#mapobject type="htmlbefore" subid="<@subid>">
+  <#checkobjecttype objecttype="sensor" nicemessage="true" id="<@objectid>">
+
+  <span class="label"><#objectstatus name="lastvalue" id="<@objectid>"></span>
+  <#mapobject type="htmlafter" subid="<@subid>">
+</div>
