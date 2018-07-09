@@ -1,0 +1,8 @@
+<!--Custom HTML: Custom HTML element-->
+
+<div class="map_object <#sensor type="colorclassofstate" prefix="status-" mode="short" id="<@objectid>">" id="<@itemid>" objectid="<@objectid>" subid="<@subid>" style="min-width:100px;min-height:40px;<#mapobject type="coordinates" subid="<@subid>" mode="<@editmode>">">
+<#lang key="htm.ownhtmlonly.enterownhtml" default="Select an object in the map and enter your own HTML under <b>Properties</b> | <b>HTML Before</b> or <b>HTML After</b>." var="ownhtml">
+    <#mapobject type="htmlbefore" subid="<@subid>">
+    <#mapobject type="htmlafter" subid="<@subid>">
+    <#mapobject varexpand="content" showfor="previewonly" content="@ownhtml">
+</div>
